@@ -1,0 +1,86 @@
+
+.menu-page {
+  .maolizi-bgimg;
+  background-image: url("@{ossPath}img/menu_bg.jpg");
+
+  .menu-body {
+    padding: @TopBottom*2.8 @LeftRight 0;
+  }
+
+  .single-group {
+    height: @posterH*0.96;
+    position: relative;
+    margin-top: @TopBottom;
+  }
+
+  // 单个菜单
+  .single-menu {
+    cursor: pointer;
+    height: 100%;
+    // width: 50%;  // js在控制
+    padding: 0;
+    display: inline-block;
+    .bgimg {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  
+  .mask {
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 998;
+  }
+  .intro {
+    z-index: 999;
+    color: white;
+    max-width: 126px;
+    overflow: hidden;
+
+    padding: 24px @TopBottom;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    .title {
+      font-size: 110%;
+    }
+    span.iconfont {
+      margin-right: 8px;
+    }
+    .subtitle {
+      font-size: 85%;
+      color: @grayColor;
+      margin-top: @TopBottom;
+    }
+  }
+
+  .single-menu:nth-child(odd) {
+    .bgimg {
+      z-index: 888;
+      left: 0;
+      width: 58.7%;
+    }
+    .intro {
+      left: 0;
+      text-align: left;
+    }
+  }
+  .single-menu:nth-child(even) {
+    .bgimg {
+      z-index: 777;
+      right: 0;
+      width: 100%;
+    }
+    .intro {
+      right: 0;
+      text-align: right;
+    }
+  }
+
+}

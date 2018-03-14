@@ -1,0 +1,183 @@
+
+.list-page {
+  position: relative;
+
+  // 列表搜索
+  .list-search {
+    padding: @TopBottom @LeftRight @TopBottom*1.5;
+    input {
+      text-align: center;
+      border-radius: 0;
+    }
+  }
+
+  // 列表展示
+  .list-body {
+    padding-bottom: 32px;
+    .loading {
+      width: 100%;
+      text-align: center;
+      margin-top: 36%;
+      position: fixed;
+    }
+    .body {
+      padding: @LeftRight;
+    }
+  }
+
+  .single-type {
+    margin: 0 0 32px 0;
+  }
+
+  // 单个投票对象
+  .list-body .single-unit {
+    margin: 0 0 @TopBottom 0;
+    padding: 0 0 @TopBottom;
+    border-bottom: 1px solid @guideColor;
+    position: relative;
+    .img-area {
+      height: @pictureH;
+      overflow: hidden;
+    }
+    .content-area {
+      height: @pictureH;
+      position: relative;
+      padding-left: @TopBottom;
+    }
+    .title {
+      font-size: 14px;
+      line-height: 14px;
+    }
+    .title span.icon.female {
+      font-size: 16px;
+      color: @darkenPink;
+    }
+    .title span.icon.male {
+      font-size: 16px;
+      color: @blueColor;
+    }
+    .subtitle {
+      font-size: 90%;
+      line-height: 14px;
+      padding: @TopBottom 0 2px;
+      color: #8B96A1;
+    }
+    .subtitle span.icon {
+      font-size: 100%;
+    }
+    span.icon {
+      margin-right: 2px;
+    }
+
+    .arrow {
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: lighten(@lightBlack, 25%);
+    }
+    .desc {
+      font-size: 85%;
+      text-indent: 2em;
+      color: lighten(@lightBlack, 10%);
+      padding: @TopBottom 0 0;
+      overflow: hidden;
+      max-height: 60px;
+    }
+  }
+  // 投票数据及投票按钮区
+  .content-area .vote-number {
+    font-size: 14px;
+    line-height: 14px;
+    color: @text;
+    position: absolute;
+    left: @TopBottom;
+    bottom: 0;
+    &.voted {
+      color: @darkenPink;
+    }
+    span.iconfont {
+      font-size: 14px;
+      margin-right: 4px;
+    }
+  }
+  .content-area .vote-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    > div {
+      font-size: 80%;
+    }
+  }
+
+  // 页面底部
+  @footerH: 50px;
+  .list-footer .maolizi-caption {
+    z-index: 9999;
+    // height: @footerH;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    font-size: 100%;
+    box-shadow: 0 -2px 3px #ccc;
+    margin: 0;
+    padding: 0;
+    .prefix {
+      font-size: 95%;
+      line-height: @footerH;
+      border-right: 1px solid @guideColor;
+    }
+    .content {
+      font-size: 12px;
+      padding-top: 3px;
+      text-align: left;
+    }
+    span.iconfont {
+      margin-right: 4px;
+    }
+    .number {
+      position: absolute;
+      right: -16px;
+      top: -4px;
+      font-size: 85%;
+      background-color: @blueColor;
+      color: white;
+      padding: 0 5px;
+      border-radius: 999px;
+      &.danger {
+        background-color: #f5222d;
+      }
+      &.none {
+        background-color: #D9D9D9;
+      }
+    }
+    .selected-status {
+      padding: 4px 4px;
+    }
+    .name-area {
+      position: relative;
+      display: inline-block;
+    }
+    .anticon {
+      margin-left: 3px;
+      color: @online;
+      position: absolute;
+      top: -2px;
+      right: -13px;
+    }
+  }
+
+  // 开始投票
+  .start-vote {
+    height: 40px !important;
+    line-height: 40px !important;
+    font-size: 18px !important;
+    color: @online;
+  }
+
+  .rank-and-rule {
+    line-height: @footerH;
+  }
+
+}

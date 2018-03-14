@@ -1,0 +1,89 @@
+
+.ranking-page {
+  position: relative;
+  .maolizi-icon {
+    top: 22px;
+    span {
+      color: @blueColor;
+      font-size: 20px;
+      padding: 8px;
+    }
+  }
+
+  // 排行榜顶部
+  .ranking-header {
+    width: 100%;
+    max-height: 150px;
+    text-align: center;
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  // 表格内容
+  .ranking-body .single-ranking {
+    font-size: 90%;
+    margin-bottom: 32px;
+  }
+
+  // 类别标题
+  .single-ranking .single-head {
+    margin: 0;
+  }
+  // 排行数据
+  .single-ranking .single-body {
+    padding: 0 @LeftRight;
+    .subtitle {
+      padding-left: 6px;
+      padding-right: 4px;
+    }
+  }
+
+  // 表头
+  .single-body .caption {
+    height: 36px;
+    line-height: 36px;
+    color: @text;
+    font-size: 100%;
+    border-bottom: 1px solid lighten(@blueColor, 20%);
+    .title {
+      margin-left: 4px;
+    }
+    .icon-sort {
+      color: @blueColor;
+    }
+  }
+
+  // 表头&表格行 之数字和主标题
+  .number-and-title {
+    overflow: hidden;
+  }
+  .number-and-title .sort-number {
+    font-size: 105%;
+    margin-right: 4px;
+    .normal {
+      margin-right: 7px;
+      margin-left: 6px;
+    }
+    .bigger {
+      margin-right: 7px;
+      margin-left: 2px;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  // 单行数据
+  .single-body .unit {
+    color: @assistedColor;
+    padding: 8px 0;
+    border-bottom: 1px solid @guideColor;
+    .vote-number {
+      font-size: 105%;
+    }
+  }
+
+}

@@ -1,0 +1,77 @@
+
+.sidebar.component {
+  padding-top: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  .sidebar-item.empty, .sidebar-item.seperator {
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .sidebar-item.seperator {
+    border-top: 1px solid @assistedColor;
+    margin-top: 10px;
+    padding-bottom: 0;
+    margin-right: 15px;
+  }
+  .sidebar-item {
+    font-size: 100%;
+
+
+    margin:15px 0px;
+    span.iconfont {
+      line-height: 120%;
+    }
+
+    &.hoverable {
+      color: darken(white, 15%);
+      transition: all ease 0.3s;
+      cursor: pointer;
+    }
+
+    &.hoverable:hover {
+      color: darken(#4DA0FF,15%);
+    }
+
+    &.active {
+      border-left: 4px solid #4DA0FF;
+    }
+    > div.col-xs-9 {
+      // padding-left: 0;
+    }
+
+    .onlyIcon {
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0;
+      color:#4DA0FF;
+      span.iconfont {
+        font-size: 24px;
+      }
+      &.active{
+        color: @activeColor;
+      }
+    }
+    .iconAndText .icon-item {
+      padding: 0;
+      text-align: right;
+    }
+  }
+
+  .tooltip.right {
+
+    .tooltip-arrow {
+      border-right-color: lighten(#4DA0FF, 10%);
+    }
+    // 不让提示文字换行显示：
+    .tooltip-inner {
+      padding: 2px 8px;
+      white-space: nowrap;
+      background-color: lighten(#4DA0FF, 10%);
+    }
+  }
+
+  user-select: none;
+}

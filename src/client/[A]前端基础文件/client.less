@@ -1,0 +1,149 @@
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.number {
+  font-family: tahoma;
+  transition: all ease 0.5s;
+}
+
+span.iconfont {
+  font-size: 16px;
+}
+
+// 页面加载loading
+.maolizi-loading {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+}
+
+// 采用div格式加背景图片的基础样式
+.maolizi-bgimg {
+  // background-position: center;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// 多出长度的string以省略号的形式显示
+.maolizi-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+// 未载入海报时显示背景色
+.maolizi-nobanner {
+  background: -moz-linear-gradient(top, #1BA19D, #22CDC8);   /* Firefox */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1BA19D), color-stop(1, #22CDC8));    /* Saf4+, Chrome */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1BA19D', endColorstr='#22CDC8', GradientType='0');     /* IE*/
+}
+
+/*-------------------  Slider Start ---------------------*/
+.slick-slide {
+  overflow: hidden;
+}
+.slick-dots li button {
+  padding: 0 !important;
+  transition: all 0.5s;
+  border-radius: 999px;
+  background-color: darken(@darkWhite, 15%);
+}
+.slick-dots li button:before {
+  content: "";
+}
+.slick-active button {
+  background-color: @blueColor !important;
+}
+// 轮番左右箭头
+.slick-prev:before {
+  content: "\e60d" !important;
+}
+.slick-next:before {
+  content: "\e618" !important;
+}
+.slick-prev:before, .slick-next:before {
+  opacity: 1.0 !important;
+  font-size: 24px !important;
+  color: #c4c4c4 !important;
+  font-family: "iconfont" !important;
+}
+
+.slick-prev {
+  left: 0 !important;
+}
+.slick-next {
+  right: 0 !important;
+}
+.slick-prev, .slick-next {
+  z-index: 1050 !important;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 32px !important;
+}
+/*------------------- Slider End ---------------------*/
+
+// 投票页面的排行榜奖杯图标
+.maolizi-icon {
+  z-index: 999;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  span {
+    font-size: 32px;
+    color: #E20B20;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 999px;
+    padding: 3px;
+  }
+}
+
+// 投票之 未投&已投 两状态按钮
+.maolizi-vote {
+  width: 72px;
+  overflow: hidden;
+  border-radius: 2px;
+  text-align: center;
+  transition: all ease 0.5s;
+  &.voting {
+    cursor: pointer;
+    color: #1890ff;
+    background: #e6f7ff;
+    border-color: #e6f7ff;
+  }
+  &.selected {
+    cursor: pointer;
+    color: #f56a00;
+    background: #fde3cf;
+    border-color: #fde3cf;
+  }
+  &.voted {
+    color: @assistedColor;
+    cursor: not-allowed;
+    background-color: @guideColor;
+    border: 1px solid @grayColor;
+  }
+}
+
+// 多类别同一页面显示
+.maolizi-caption {
+  font-size: 18px;
+  color: @blueColor;
+  text-align: center;
+  padding: @TopBottom*1.2 @LeftRight;
+  margin-bottom: @TopBottom;
+
+  .maolizi-bgimg;
+  background-image: url("@{ossPath}img/caption_bg.jpg");
+}

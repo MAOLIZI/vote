@@ -1,0 +1,89 @@
+@import "./测试/index";
+
+/**
+ * 各界面顶端 统一控制
+ */
+@navbarHeight: 44px;
+@navbarTextSize: 20px;
+@navbarLogoSize: 30px;
+
+@tabbarHeight: 49px;
+@tabbarLogoSize: 20px;
+@tabbarTextSize: 10px;
+@tarbarTextHeight: 16px;
+
+/**
+ * 界面所需颜色
+ */
+@blue: darken(#6c9ae4, 20%);
+@darkBlue: #05375d;
+@lightBlue: #7ab4d3;
+@yellow: #fd904f;
+@orange: #fd904f;
+@lightWhite: #f4f4f4;
+@lightBlack: #808080;
+@mediumWhite: #e1e1d2;
+@darkWhite: darken(@lightWhite, 10%);
+
+@red: #c65d5e;
+@lightRed: #f97179;
+@green: #79c2b0;
+
+/**
+ * 通用css类
+ */
+.shadow {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.lightShadow {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.textShadow {
+  text-shadow: 0px 1px 3px @darkWhite;
+}
+
+.screen {
+  overflow: hidden;
+}
+/**
+ * 通用加载样式
+ */
+#loadingItem {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  .loadingBox {
+    background-color: #666;
+    width: 120px;
+    height: 100px;
+    margin: 0;
+    text-align: center;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .col-xs-12 {
+    padding: 15px 0;
+  }
+
+  .loadingGif {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 20px;
+  }
+
+  .loadingText {
+    color: white;
+  }
+}

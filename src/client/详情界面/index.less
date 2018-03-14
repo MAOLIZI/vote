@@ -1,0 +1,114 @@
+
+.detail-page {
+
+  // word
+
+
+  // text
+  .content.text {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    .content-body {
+      padding: @LeftRight 15px 36px;
+    }
+    .title {
+      font-size: 130%;
+      text-align: center;
+      color: @darkenPink;
+      padding: @TopBottom*2 0;
+    }
+    .subtitle {
+      font-size: 100%;
+      text-align: right;
+      color: @mainColor;
+      padding: 0 0 @TopBottom*3;
+      span.iconfont {
+        font-size: 95%;
+        margin-right: 2px;
+      }
+    }
+    .intro {
+      color: @blueColor;
+      font-size: 115%;
+      text-align: center;
+      padding: 0 0 10px 0;
+    }
+    .main-text {
+      font-size: 90%;
+      line-height: 24px;
+      color: @darkenBlue;
+      text-indent: 2em;
+    }
+  }
+
+  // picture
+  .content.picture {
+    height: 100%;
+    width: 100%;
+    padding-top: 30%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    .slick-dots {
+      bottom: 40px;
+    }
+    .slick-dots li {
+      height: 5px;
+      width: auto;
+      margin: 0 10px;
+      button {
+        height: 4px;
+        width: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+    }
+    .slick-dots .slick-active button {
+      width: 26px;
+    }
+
+    .desc {
+      color: white;
+      font-size: 100%;
+      text-indent: 2em;
+      position: fixed;
+      left: 15px;
+      right: 15px;
+      bottom: 24px;
+    }
+  }
+
+  // video
+  .content.video {
+    height: 100%;
+    width: 100%;
+    padding-top: 55%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    .video-box {
+      position: relative;
+      text-align: center;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .anticon.anticon-play-circle-o {
+      z-index: 99;
+      cursor: pointer;
+      color: white;
+      font-size: 36px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -18px;
+      margin-left: -18px;
+    }
+  }
+
+
+}

@@ -1,0 +1,46 @@
+@import "./[A]前端基础文件/client";                // 本项目的通用样式
+@import "../common/样式/index";                    // 必备颜色、notifIt、common等
+@import "./[A]前端基础文件/阿里图标/iconfont";      // 阿里图库
+
+@import "./[B]二维码/index";
+@import "./主界面/index";
+
+@import "./投票规则/index";
+@import "./菜单界面/index";
+@import "./列表界面/index";
+@import "./详情界面/index";
+@import "./排行榜/index";
+
+
+
+/* 主要HTML元素的样式 */
+html {
+  position: relative;
+}
+body {
+  background-color: @backColor;
+}
+
+#page_holder {
+  background-color: @backColor;
+}
+
+#introText {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 24px;
+}
+
+/* 主内容容器 */
+body > .container-fluid {
+  .inner {
+    padding: 0px 10px;
+
+    @media (min-width: @screen-md-min) {
+      // padding: 25px 25px;
+    }
+  }
+}

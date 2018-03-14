@@ -1,0 +1,47 @@
+
+body {
+  font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+span.iconfont {
+  font-size: 16px;
+}
+
+// 页面加载loading
+.maolizi-loading {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+}
+
+// 采用div格式加背景图片的基础样式
+.maolizi-bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// 多出长度的string以省略号的形式显示
+.maolizi-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 未载入海报时显示背景色
+.maolizi-nobanner {
+  background: -moz-linear-gradient(top, #1BA19D, #22CDC8);   /* Firefox */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1BA19D), color-stop(1, #22CDC8));    /* Saf4+, Chrome */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1BA19D', endColorstr='#22CDC8', GradientType='0');     /* IE*/
+}

@@ -1,0 +1,22 @@
+
+.backdrop.component {
+  position:fixed;
+  z-index:25;
+  background-color:fadeout(@lightGray, 5%);
+  top: 0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  padding: 100px 20px;
+  > div {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .btn.close-button {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    font-size: 120%;
+  }
+}

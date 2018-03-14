@@ -1,0 +1,39 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(name='description', content='')
+    meta(name='author', content='')
+    meta(name="renderer", content="webkit")
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    link(rel='icon', sizes='192x192', href='img/webIcon.jpg')
+    title 接口测试
+
+    link(href= ossPath + 'index.css', rel='stylesheet')
+    link(href= ossPath + 'ext/bootstrap.min.css', rel='stylesheet')
+
+  body(data-oss=ossPath, data-debug=debug?"debug":"")
+    // 主内容
+    #page_holder
+
+    // IE Support
+    <!--[if lt IE 8]>
+    <script src="/ext/IE8.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="/ext/IE9.js"></script>
+    <script src="/ext/html5shiv.min.js"></script>
+    <script src="/ext/support_ie_8.js"></script>
+    <![endif]-->
+
+    // Javascripts
+    if debug
+      script(src='/gulp/gulp_errors.js')
+
+    script(src=ossPath + 'ext/jquery.min.js')
+    script.
+      window.ossPath = $(document.body).attr('data-oss');
+      window.debug = $(document.body).attr('data-debug') == "debug";
+
+    script(src= ossPath + 'index.js')

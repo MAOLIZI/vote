@@ -1,0 +1,75 @@
+.background {
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-position: center;
+  background-size: 100% 100%;
+  transition: 1s ease all;
+  &.blur {
+    filter: blur(3px);
+  }
+}
+
+.background {
+  background-color: black;
+  video {
+    width: 120%;
+    height: auto;
+    margin-top: -10%;
+    margin-left: -10%;
+  }
+}
+
+.background-control {
+  @control-height: 100px;
+  position: fixed;
+  z-index: 2;
+  top: 40%;
+  line-height: @control-height;
+  font-size: @control-height/2;
+  color: white;
+  padding: 0 20px;
+  cursor: pointer;
+  user-select: none;
+
+  &.prev {
+    left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  &.next {
+    right:0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &:hover {
+    background-color: rgba(0,0,0,0.3);
+  }
+
+  &:active {
+    background-color: rgba(0,0,0,0.6);
+  }
+}
+
+.background-enter {
+  opacity: 1;
+}
+
+.background-enter.background-enter-active {
+  opacity: 1;
+}
+
+.background-leave {
+  opacity: 1;
+  z-index: 3;
+}
+
+.background-leave.background-leave-active {
+  opacity: 0.01;
+  transition: all 1000ms ease;
+}

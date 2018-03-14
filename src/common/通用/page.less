@@ -1,0 +1,117 @@
+
+/**
+ * 单纯加载页面显示：loading（中间）:
+ */
+.pageLoading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	z-index: 9999999999;
+	background-color: rgba(0, 0, 0, 0.2);
+
+	.col-xs-12 {
+		border-radius: 5px;
+		padding: 14px 0;
+
+		background-color: #666;
+		width: 120px;
+		height: 100px;
+		margin: 0;
+		text-align: center;
+
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+
+		.loadingGif {
+			width: 32px;
+			height: 32px;
+			margin-bottom: 20px;
+		}
+
+		.loadingText {
+			color: white;
+		}
+	}
+}
+
+/**
+ * 警告/提醒 样式：
+ */
+#warningItem {
+	width: 200px;
+	height: 120px;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 9999;
+
+	.panel-heading {
+		.textShadow;
+	}
+
+	.panel-body {
+		color: #F2AA40;
+	}
+}
+
+/*中下位置纯加载*/
+.noTextLoading {
+	width: 100%;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	margin: 0 0 0 0 !important;
+	z-index: 999999;
+
+	.col-xs-12{
+		text-align: center;
+		img{
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+
+.modal#modalMessage {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	text-align: center;
+	transform: translateX(-50%) translateY(-50%);
+
+	.modal-header {
+		background-color: red;
+		color: white;
+		font-size: 110%;
+		padding: 5px;
+	}
+
+	.modal-footer {
+		padding: 5px 5px;
+		border: none;
+		text-align: center;
+		display: none;
+	}
+
+	.modal-footer.row {
+		display: block;
+	}
+
+	&.singleButton {
+		.modal-footer {
+			display: block;
+		}
+		.modal-footer.row {
+			display: none;
+		}
+	}
+}

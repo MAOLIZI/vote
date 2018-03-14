@@ -1,0 +1,196 @@
+@altColor: darken(@green, 10%);
+
+.container-fluid {
+  overflow-x: hidden;
+}
+.test-page.error {
+  background-color: @red;
+
+}
+.test-page {
+  transition: background-color 0.5s ease;
+  min-height: 1080px;
+  background-color: @altColor;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  .histroy{
+    margin: 0px 5px 0 5px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0px 15px;
+    box-shadow: 0 3px 7px #777;
+    background-color: white;
+    padding: 30px;
+    .delAllHistroy{
+      text-align: right;
+      padding: 0px;
+    }
+    .delAllHistroy .btn{
+      margin-top: 15px;
+      background-color:white;
+      color:@mainColor;
+      &:hover {
+        background-color: @mainColor;
+        color: white;
+      }
+    }
+    .list{
+      border-bottom: 1px solid #ccc;
+      padding: 15px;
+      cursor: pointer;
+      .lookBtnArea .btn{
+        background-color:white;
+        color:@mainColor;
+        &:hover {
+          background-color: @mainColor;
+          color: white;
+        }
+      }
+      .api,.date{
+        margin-top: 10px;
+      }
+    }
+    .reSendBtnArea{
+      text-align: right;
+      .btn{
+        background-color: rgba(0,0,0,0.8);
+        color: white;
+        border-radius: 10px;
+        border: white 3px solid;
+        font-size: 120%;
+        padding: 10px 20px;
+        position: relative;
+        top: 0px;
+        left: 10px;
+        z-index: 999;
+        box-shadow: 0 3px 5px #333;
+        &:hover {
+          background-color: rgba(0,0,0,0.9);
+          color: @altColor;
+        }
+      }
+    }
+  }
+  .inner {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  .sendPanel {
+    margin: 0px 5px 0 5px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0px 15px;
+    box-shadow: 0 3px 7px #777;
+  }
+
+  .apiPanel {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 0px;
+  }
+  .apiSelect {
+    width: 100%;
+    border: 1px solid #777;
+    margin-top: 10px;
+  }
+  .params{
+    padding: 10px 15px;
+    .item{
+      border: 1px solid @mainColor;
+    }
+  }
+  .desc {
+    padding: 10px 15px;
+    color: #777;
+    background-color: #efefef;
+    margin: 0 15px;
+    border-radius: 5px;
+  }
+  .form-group {
+    padding: 10px 15px 10px 30px;
+    .form-label {
+      line-height: 29px;
+      border-bottom: 1px solid #eee;
+      padding-left: 10px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      float: left;
+      width: 100px;
+    }
+
+    .form-input {
+      margin-left: 100px;
+      border-bottom: 1px solid @altColor ;
+      margin-right: 15px;
+    }
+
+    .form-control {
+      padding-bottom: 0px;
+      border: none;
+      background-color: transparent;
+      box-shadow: none;
+      border-radius: 0px;
+    }
+
+    .form-control::placeholder {
+      color: lighten(@altColor, 20%);
+    }
+
+    .form-control.readonly {
+      background-color: fade(#333, 10%);
+    }
+  }
+
+  .responseLabel, .requestLabel  {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    text-align: center;
+  }
+
+  .responseLabel {
+    color: white;
+    margin-top: 10px;
+    font-size: 120%;
+  }
+  .requestLabel {
+    background-color: white;
+  }
+
+  .response {
+    padding: 15px 15px;
+    min-height: 200px;
+    width: 100%;
+    color: white;
+    padding-bottom: 50px;
+    border: none;
+    box-shadow: none;
+
+
+    pre {
+      background-color: transparent;
+      border: none;
+      color: white;
+    }
+  }
+  .sendButton {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    border-radius: 10px;
+    border: white 3px solid;
+    font-size: 120%;
+    padding: 10px 20px;
+    position: relative;
+    top: 25px;
+    left: 10px;
+    z-index: 999;
+    box-shadow: 0 3px 5px #333;
+
+
+    &:hover {
+      background-color: rgba(0,0,0,0.9);
+      color: @altColor;
+    }
+  }
+}

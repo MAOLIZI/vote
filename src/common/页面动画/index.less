@@ -1,0 +1,94 @@
+.ui-fade-enter {
+  opacity: 0.01;
+}
+
+.ui-fade-enter.ui-fade-enter-active {
+  opacity: 1;
+  transition: all 200ms ease-in;
+}
+
+.ui-fade-leave {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.ui-fade-leave.ui-fade-leave-active {
+  opacity: 0.01;
+  transition: all 200ms ease-in;
+}
+
+
+// 右移
+.ui-slide-right-enter {
+  transform: translateX(100%);
+}
+
+.ui-slide-right-enter.ui-slide-right-enter-active {
+  transform: translateX(0px);
+  transition: all 500ms ease-in-out;
+}
+
+.ui-slide-right-leave {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: translateX(0);
+
+}
+
+.ui-slide-right-leave.ui-slide-right-leave-active {
+  transform:translateX(-100%);
+  transition: all 500ms ease-in;
+}
+
+
+// 左移
+.ui-slide-left-enter {
+  transform: translateX(-100%);
+}
+
+.ui-slide-left-enter.ui-slide-left-enter-active {
+  transform: translateX(0px);
+  transition: all 500ms ease-in-out;
+}
+
+.ui-slide-left-leave {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: translateX(0);
+
+}
+
+.ui-slide-left-leave.ui-slide-left-leave-active {
+  transform:translateX(100%);
+  transition: all 500ms ease-in-out;
+}
+
+
+.ui-fade-zoom-enter {
+  opacity: 0.01;
+  transform: scale3d(1.3,1.3,1);
+}
+
+.ui-fade-zoom-enter.ui-fade-zoom-enter-active {
+  opacity: 1;
+  transform: scale3d(1,1, 1);
+  transition: all 200ms ease-out;
+}
+
+.ui-fade-zoom-leave {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: scale3d(1,1,1);
+}
+
+.ui-fade-zoom-leave.ui-fade-zoom-leave-active {
+  opacity: 0.01;
+  transition: all 300ms ease-in;
+  transform: scale3d(1.3,1.3,1);
+}

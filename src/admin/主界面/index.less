@@ -1,0 +1,142 @@
+@headH: 36px;           // 日历头部的高度
+@serachLRNum: 30px;     // 搜索区左右间距值
+@containerNum: 20px;   // 主页面容器的上下左右间距值
+
+
+.main-page {
+  min-width: 600px;
+  font-size: 14px;
+  position: relative;
+
+
+  /******** 左侧页面区 *********/
+  .leftSub {
+    padding: 0;
+  }
+
+  .sidebar-col {
+    background-image: -moz-linear-gradient(top, #A1B1B1, #B8B09A); /* Firefox */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A1B1B1), color-stop(1, #B8B09A)); /* Saf4+, Chrome */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A1B1B1', endColorstr='#B8B09A', GradientType='0'); /* IE*/
+    .sidebar {
+      padding: 0 0 0 0;
+    }
+    .sidebar-item {
+      &.hoverable:hover {
+
+      }
+
+      &.active {
+
+      }
+    }
+    .iconAndText .icon-item span.iconfont {
+      font-size: 16px;
+    }
+  }
+
+  // 系统logo
+  .system_logo_area {
+    text-align: center;
+    padding: 30px 0 55px 0;
+    img {
+      cursor: pointer;
+      height: auto;
+      width: 70%;
+    }
+  }
+
+
+  /******** 右侧页面区 *********/
+  .rightSub {
+    padding: 0;
+  }
+
+  .ui-content {
+    // border: 1px solid red;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  // 主页面中的当前页面主容器
+  .ui-content-inner {
+    margin: @posterH*1.5 0 0;
+    &.hasCalendar {
+
+    }
+  }
+
+  // 搜索和基本信息区域
+  .mainpage-top {
+    width: 100%;
+    background-color: white;
+    height: @posterH*1.5;
+    padding-left: @serachLRNum;
+    border-bottom: 1px solid darken(@guideColor, 5%);
+    box-shadow: 0 1px 1px lighten(@guideColor, 2%);
+    position: relative;
+    .top-title {
+      .maolizi-ellipsis;
+      line-height: @posterH*1.5;
+      font-size: 20px;
+      padding: 0 15px 0 30px;
+    }
+  }
+
+  // 主内容
+  .ui-content-inner .subfieldRight {
+
+    // 左侧
+    .leftSub {
+      background-color: white;
+    }
+
+    // 右侧
+    .rightSub {
+      background-color: white;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  // 用户基本信息
+  .mainpage-top .username_area {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: @serachLRNum;
+
+    line-height: @posterH*1.5;
+    text-align: right;
+    color: @mainColor;
+
+    .username {
+      font-size: 14px;
+    }
+    span.iconfont {
+      color: black;
+      font-size: 10px;
+      margin-left: 5px;
+    }
+    .userRole {
+      color: black;
+      cursor: pointer;
+      margin-left: 2px;
+      font-size: 10px;
+    }
+  }
+
+  // 右上角角色提示工具
+  .mainpage-top .tooltip {
+
+    .tooltip-arrow {
+      border-bottom-color: lighten(@mainColor, 10%);
+    }
+    .tooltip-inner {
+      padding: 2px 8px;
+      background-color: lighten(@mainColor, 10%);
+    }
+  }
+
+}

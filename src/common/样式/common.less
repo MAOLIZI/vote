@@ -1,0 +1,126 @@
+
+.maolizi-noshadow {
+  text-shadow: none;
+  box-shadow: none;
+}
+
+/***<浏览栏> start***/
+nav.navbar {
+  .maolizi-noshadow;
+  display: none;
+  background-color: white;
+  border-bottom: 1px solid @guideColor;
+  padding: 20px 30px;
+
+  .navbar-brand {
+    color: black;
+  }
+
+  button.navbar-toggle, button.navbar-toggle:hover {
+    .maolizi-noshadow;
+    width: 20px;
+    height: 28px;
+    border: none;
+    background-color: white;
+    color: white;
+    margin: 0;
+    padding: 0;
+    .icon-bar {
+      width: 20px;
+      background-color: black;
+    }
+  }
+  /* Header的容器 */
+  .navbar-header {
+    /* 标题 */
+    h3 {
+      margin: 0;
+      padding: 0;
+      font-weight: bolder;
+    }
+  }
+}
+/***<浏览栏> end***/
+
+
+
+/* Android 2.3不支持百分比圆角，Android4.2x不支持border-radius缩写，必须完整写4个角*/
+/* Android 4.2x系统浏览器，同时设置Border-raius时，背景色会溢出，需设置background-clip*/
+.round {
+	border-top-left-radius: 999px; /* 左上角 */
+    border-top-right-radius: 999px; /* 右上角 */
+    border-bottom-right-radius: 999px; /* 右下角 */
+    border-bottom-left-radius: 999px; /* 左下角 */
+    border-radius: 999px;
+    background-clip: padding-box;
+}
+
+.roundCorner(@radius) {
+	border-top-left-radius: @radius; /* 左上角 */
+    border-top-right-radius: @radius; /* 右上角 */
+    border-bottom-right-radius: @radius; /* 右下角 */
+    border-bottom-left-radius: @radius; /* 左下角 */
+    border-radius: @radius;
+    background-clip: padding-box;
+}
+
+.noRoundBorder  {
+	border-top-left-radius: 0px; /* 左上角 */
+    border-top-right-radius: 0px; /* 右上角 */
+    border-bottom-right-radius: 0px; /* 右下角 */
+    border-bottom-left-radius: 0px; /* 左下角 */
+    border-radius: 0px;
+    background-clip: padding-box;
+}
+
+
+/* 以下是从Bootstrap 3 中摘录的 MediaQuery*/
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `@screen-xs` as of v3.0.1
+@screen-xs:                  480px;
+//** Deprecated `@screen-xs-min` as of v3.2.0
+@screen-xs-min:              @screen-xs;
+//** Deprecated `@screen-phone` as of v3.0.1
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `@screen-sm` as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+//** Deprecated `@screen-tablet` as of v3.0.1
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `@screen-md` as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+/*
+  @media (min-width: @screen-sm-min) {
+    margin: 10px 10px 0 10px;
+  }
+  @media (min-width: @screen-md-min) {
+    margin: 20px 25px 0 25px;
+  }
+  @media (min-width: @screen-lg-min) {
+    margin: 20px 25px 0 25px;
+  }
+*/

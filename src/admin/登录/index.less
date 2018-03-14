@@ -1,0 +1,68 @@
+.login-page {
+  @loginWidth: 1000px;
+  @loginHeight: 500px;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  /* 容器通用部分 */
+  .unit {
+    width: @loginWidth;
+    height: @loginHeight;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -@loginWidth/2;
+    margin-top: -@loginHeight/2;
+    background-color: rgba(255,255,255,0.7);
+    z-index: 10;
+    text-align: center;
+  }
+
+  .loginBox {
+    border-radius: 15px;
+    margin: 0;
+  }
+
+  .unit .imgArea {
+    height: 100%;
+    background-image: url("./img/loginBG-s2.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .unit .loginArea {
+    font-weight: bold;
+    height: 100%;
+    padding: 5% 15px;
+    span.ant-input-prefix {
+      color: @blueColor;
+    }
+    input {
+      height: 40px;
+      line-height: 40px;
+      font-size: 130%;
+      padding-left: 40px;
+    }
+  }
+  /* 公司Logo */
+  .company-name {
+    color: @blueColor;
+    padding: 24px 0 32px;
+    font-size: 30px;
+    font-family: monospace;
+  }
+
+  .company-logo {
+    text-align: center;
+  }
+
+  .login-form-button {
+    margin-top: 32px;
+    padding: 6px 40px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: none;
+    color: white;
+  }
+}
