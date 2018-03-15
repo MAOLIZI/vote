@@ -1,31 +1,10 @@
-================================================================================
 
-****** 除filter为 dwdvote 外，其他均为 railway-dwd ******
-
-http://localhost:5800/main/poster?id=123&filter=dwdvote
-================================================================================
-poster.jpg        <100k  750×1334
-banner.jpg        <80k   640×300
-share.jpg         <60k   200×200
-
-设置活动时，type="VOTE" 必须满足！
-================================================================================
 # 已完成
+  所有作品均从admin端上传
+  所有类别均在admin端增减
+  投票规则/方式由admin自行选择（client端根据字段自动生成适应规则的界面）
 
-
-
+  普通管理员 只能查看自己的所有作品和数据
+  超级管理员 可以查看所有的作品和对应的数据
 
 # DOING
-  - 更新wechatConfig
-  - 更新qrcode.jpg
-
-
-
-================================================================================
-@font-face {font-family: "iconfont";
-  src: url('@{ossPath}img/iconfont.eot?t=1483692891438'); /* IE9*/
-  src: url('@{ossPath}img/iconfont.eot?t=1483692891438#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('@{ossPath}img/iconfont.woff?t=1483692891438') format('woff'), /* chrome, firefox */
-  url('@{ossPath}img/iconfont.ttf?t=1483692891438') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('@{ossPath}img/iconfont.svg?t=1483692891438#iconfont') format('svg'); /* iOS 4.1- */
-}
